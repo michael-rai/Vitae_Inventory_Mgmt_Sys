@@ -1,4 +1,5 @@
 // const getFormFields = require('../../lib/get-form-fields.js')
+// const ui = require('./ui.js')
 
 const onLogIn = event => {
   event.preventDefault()
@@ -23,7 +24,14 @@ const onRunSim = event => {
   $('#simMsg').text('Simulation Running...')
   const cardMeter = document.getElementsByTagName('meter')
   for (let i = 0; i < cardMeter.length; i++) {
-    console.log(cardMeter[i].value)
+    const meterVal = cardMeter[i].value
+    if (meterVal <= 1) {
+      $('#rxAlert4').text('REORDER REQUESTED!')
+      $('#rxAlert4').fadeOut(6000)
+      $('#rxAlert4a').fadeIn(7000).text('Shipment Received, press "Restock"')
+      // $('#rxAlert4a').text('Shipment Received, press "Restock"')
+    }
+    console.log(meterVal)
   }
 }
 
