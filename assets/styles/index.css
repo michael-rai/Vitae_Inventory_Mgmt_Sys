@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+.navbar {
+  background-color: #34495e;
+  color: white;
+  font-family: 'Arvo', serif;
+}
+
+body {
+  font-family: 'Arvo', serif;
+}
+
+.rxAlert {
+  color: gray;
+}

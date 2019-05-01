@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Vitae Inventory System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favLogo.png">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+          <a class="navbar-brand" href="#">
+          <img src="/public/VitaeLogo.png" width="30" height="30" alt=""></a><strong>Vitae Industries: Inventory Management System</strong>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-receipt"></i>Reports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-envelope-open-text"></i>Help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></i>Log Out</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <a href="https://vitaeindustries.com/">Vitae Indutries, Inc.</a>
+            </span>
+          </div>
+      </nav>
+
+      <!--Landing Page-->
+      <div class="jumbotron jumbotron-fluid bg-white">
+        <div class="container text-center">
+          <img src="/public/VitaeLogo.png" alt="VitaeLogo" class="img-fluid">
+          <h1 class="display-4">Vitae Automated Inventory System</h1>
+          <p class="lead">Welcome to the Demo Version of the Vitae Automated Inventory System. Sign in below by typing "0000"</p>
+          <form id="logIn">
+            <div class="input-group mb-4">
+              <input type="password" class="form-control" placeholder="Enter Store Login Code" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 5px;">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-info"  id="button-addon2">Log In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Inventory View -->
+
+
+        <div class="container-fluid" id="inventoryView">
+          <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="/public/1.jpg" class="card-img-top" alt="..." style="width: 100px; height: 100px;">
+              <div class="card-body">
+                <h5 class="card-title">Medication # 1</h5>
+                <p class="card-text">This is a dummy description of medication in Inventory </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">In Stock</li>
+                <li class="list-group-item"><meter value="9" min="0" max="10">9 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
+              </ul>
+              <div class="card-body">
+                <p class="rxAlert"><em>No alerts at this time.</em></p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/public/2.jpg" class="card-img-top" alt="..." style="width: 100px; height: 100px;">
+              <div class="card-body">
+                <h5 class="card-title">Medication # 2</h5>
+                <p class="card-text">This is a dummy description of medication in Inventory </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">In Stock</li>
+                <li class="list-group-item"><meter value="4" min="0" max="10">4 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
+              </ul>
+              <div class="card-body">
+                <p class="rxAlert"><em>No alerts at this time.</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/public/3.jpeg" class="card-img-top" alt="..." style="width: 100px; height: 100px;">
+              <div class="card-body">
+                <h5 class="card-title">Medication # 3</h5>
+                <p class="card-text">This is a dummy description of medication in Inventory </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">In Stock</li>
+                <li class="list-group-item"><meter value="8" min="0" max="10">8 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
+              </ul>
+              <div class="card-body">
+                <p class="rxAlert"><em>No alerts at this time.</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/public/4.jpeg" class="card-img-top" alt="..." style="width: 100px; height: 100px;">
+              <div class="card-body">
+                <h5 class="card-title">Medication # 4</h5>
+                <p class="card-text">This is a dummy description of medication in Inventory </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">In Stock</li>
+                <li class="list-group-item"><meter value="2" min="0" max="10">2 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
+              </ul>
+              <div class="card-body">
+                <p class="rxAlert"><em>No alerts at this time.</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- footer -->
+      <nav class="navbar fixed-bottom navbar-light ">
+        <a class="navbar-brand text-center" href="#">Vitae Industries, Inc. 2018</a>
+      </nav>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
