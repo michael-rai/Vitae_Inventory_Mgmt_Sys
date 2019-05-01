@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
           <a class="navbar-brand" href="#">
           <img src="/public/VitaeLogo.png" width="30" height="30" alt=""></a><strong>Vitae Industries: Inventory Management System</strong>
-          <div class="collapse navbar-collapse" id="navbarText">
+          <div class="collapse navbar-collapse" id="navbarText" hidden>
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
@@ -34,12 +34,12 @@
               </li>
               <li class="nav-item">
                 <form id='sign-out'>
-                  <button type="button" class="btn" id="logOut"><em>Sign Out</em></button>
+                  <button type="button" class="btn" id="logOut"><em><i class="fas fa-sign-out-alt"></i>Sign Out</em></button>
                 </form>
               </li>
             </ul>
             <span class="navbar-text">
-              <a href="https://vitaeindustries.com/">Vitae Indutries, Inc.</a>
+              <a href="https://vitaeindustries.com/" target="_blank">Vitae Indutries, Inc.</a>
             </span>
           </div>
       </nav>
@@ -58,6 +58,11 @@
               </div>
             </div>
           </form>
+
+          <!-- login Staus msg-->
+          <div class="container text-center">
+            <h5 id="loginMsg">Invalid Store Login, please try again (will move this feature)</h5>
+          </div>
         </div>
       </div>
 
@@ -65,6 +70,12 @@
 
 
         <div class="container-fluid" id="inventoryView" hidden>
+
+          <!-- Simulation Running Msg -->
+          <div class="container text-center">
+            <h5 id="simMsg"></h5>
+          </div>
+
           <div class="row">
           <div class="col">
             <div class="card">
@@ -79,7 +90,7 @@
                 <li class="list-group-item"><meter value="9" min="0" max="10">9 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
               <div class="card-body">
-                <p class="rxAlert"><em>No alerts at this time.</em></p>
+                <p id="rxAlert1"><em>No alerts at this time.</em></p>
               </div>
             </div>
 
@@ -97,7 +108,7 @@
                 <li class="list-group-item"><meter value="4" min="0" max="10">4 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
               <div class="card-body">
-                <p class="rxAlert"><em>No alerts at this time.</em></p>
+                <p id="rxAlert2"><em>No alerts at this time.</em></p>
               </div>
             </div>
           </div>
@@ -114,7 +125,7 @@
                 <li class="list-group-item"><meter value="8" min="0" max="10">8 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
               <div class="card-body">
-                <p class="rxAlert"><em>No alerts at this time.</em></p>
+                <p id="rxAlert3"><em>No alerts at this time.</em></p>
               </div>
             </div>
           </div>
@@ -127,21 +138,26 @@
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">SKU # 0001</li>
-                <li class="list-group-item">In Stock</li>
+                <li class="list-group-item stock">In Stock</li>
                 <li class="list-group-item"><meter value="2" min="0" max="10">2 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
               <div class="card-body">
-                <p class="rxAlert"><em>No alerts at this time.</em></p>
+                <p id="rxAlert4"><em>No alerts at this time.</em></p>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Run Simulation for Demo -->
+        <div class="container text-center" >
+        <button type="button" class="btn btn-secondary btn-lrg" id="runSim">Run Simulation</button>
         </div>
       </div>
 
 
       <!-- footer -->
-      <nav class="navbar fixed-bottom navbar-light ">
-        <a class="navbar-brand text-center" href="#">Vitae Industries, Inc. 2018</a>
+      <nav class="navbar fixed-bottom navbar-light text-center" id="footer">
+        <a class="navbar-brand" href="https://vitaeindustries.com/" target="_blank">Vitae Industries, Inc. 2019</a>
       </nav>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

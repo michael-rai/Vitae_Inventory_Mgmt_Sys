@@ -1,5 +1,6 @@
 ![Imgur](https://i.imgur.com/p9jeHwf.png)
 # Vitae Inventory Management System
+![Build Status](https://img.shields.io/badge/Build-In--Development-yellow.svg)
 
 This is a demo version of the Inventory Management System for Vitae Industries. This
 single page web application allows for a user to keep track of their pharmacy inventory and when a product is at a threshold of 10% to depletion, it connects to an API system to reorder supplies.
