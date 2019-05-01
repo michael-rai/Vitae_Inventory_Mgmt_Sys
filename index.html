@@ -33,7 +33,9 @@
                 <a class="nav-link" href="#"><i class="fas fa-envelope-open-text"></i>Help</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></i>Log Out</a>
+                <form id='sign-out'>
+                  <button type="button" class="btn" id="logOut"><em>Sign Out</em></button>
+                </form>
               </li>
             </ul>
             <span class="navbar-text">
@@ -43,7 +45,7 @@
       </nav>
 
       <!--Landing Page-->
-      <div class="jumbotron jumbotron-fluid bg-white">
+      <div class="jumbotron jumbotron-fluid bg-white" id="landingPage">
         <div class="container text-center">
           <img src="/public/VitaeLogo.png" alt="VitaeLogo" class="img-fluid">
           <h1 class="display-4">Vitae Automated Inventory System</h1>
@@ -62,7 +64,7 @@
       <!-- Inventory View -->
 
 
-        <div class="container-fluid" id="inventoryView">
+        <div class="container-fluid" id="inventoryView" hidden>
           <div class="row">
           <div class="col">
             <div class="card">

@@ -11,6 +11,10 @@ body {
   font-family: 'Arvo', serif;
 }
 
+#inventoryView {
+  margin-top: 50px;
+}
+
 .rxAlert {
   color: gray;
 }
