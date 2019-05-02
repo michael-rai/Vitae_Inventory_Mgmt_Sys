@@ -30,10 +30,12 @@ const onRunSim = event => {
     const meterVal = cardMeter[i].value
     if (meterVal <= 1) {
       $('#rxAlert4').text('REORDER REQUESTED!')
-      $('#rxAlert4').fadeOut(6000)
-      $('#rxAlert4a').fadeIn(7000).text('Shipment Received, press "Restock"')
+      $('#rxAlert4').fadeOut(5000)
+      setTimeout(function shipRecd () {
+        $('#rxAlert4a').text('Shipment Received, press "Restock"')
+      }, 7000)
       // $('#rxAlert4a').text('Shipment Received, press "Restock"')
-      document.getElementById('meterRestock').hidden = false
+      // document.getElementById('meterRestock').hidden = false
     }
     console.log(meterVal)
   }
@@ -45,9 +47,17 @@ const meterRefresh = event => {
   document.getElementById('meter4').value = 10
 }
 
+const onSendMsg = event => {
+  event.preventDefault()
+  console.log('msg sent!')
+  // $('#sendMsg').trigger('reset')
+  // $('#msgSuccess').text('Your message has been sent. Please allow 2 Business Days for a repsonse.')
+}
+
 module.exports = {
   onLogIn,
   onLogOut,
   onRunSim,
-  meterRefresh
+  meterRefresh,
+  onSendMsg
 }
