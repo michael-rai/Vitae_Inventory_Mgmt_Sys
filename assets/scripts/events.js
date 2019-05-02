@@ -45,6 +45,9 @@ const meterRefresh = event => {
   event.preventDefault()
   console.log('clicked restock')
   document.getElementById('meter4').value = 10
+  $('#rxAlert4a').text('No Alerts at this time')
+  $('#simMsg').text('Simulation Ended')
+  $('#simMsg').fadeOut(5000)
 }
 
 const onSendMsg = event => {

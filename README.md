@@ -21,15 +21,24 @@ Each pill (supply) is highlighted in a card that gives information on it includi
 
 The Navigation Bar has a link item to Reports and Help
 - Reports will allow to see Current Invoice and Purchase History
-- Help will be a contact page that will expand for either a send message functionality or a chat feature.
+- Help will be a contact page that will expand for either a send message functionality of FAQs page or a chat feature depending on available resources.
 
 ### Technologies
 - HMTL
 - CSS
 - JavaScript
 - jQuery
+- Grunt
+- Webpack
+- Bootstrap
 
 ### Deployment:
-This demo version of the app is hosted via Heroku.
+Not deployed at this stage, can be run locally using the following command `grunt serve`
 
 ### Future Iterations:
+This is a visualization of what this program could look like. Actual production model will be rendered in React.js and Node.js (in back end). Log in functionality will be established. With an actual api call to place an order.
+
+
+Attached to this repository is a kanban-style project board that will be constantly updated to display progress which can be located here: https://github.com/michael-rai/Vitae_Inventory_Mgmt_Sys/projects/1
+
+This concept was developed by Michael Rai (Providence, RI)

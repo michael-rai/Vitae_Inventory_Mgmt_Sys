@@ -72,6 +72,17 @@
                   <div class="col"><img src="/public/1.jpg" alt="medication#1" height="42" width="42"> #1</div>
                   <div class="col">100 boxes/$1000 USD</div>
                 </div>
+                <div class="row">
+                  <div class="col"><img src="/public/4.jpeg" alt="medication#1" height="42" width="42"> #4</div>
+                  <div class="col">200 boxes/$2000 USD</div>
+                  <div class="w-100"></div>
+                  <div class="col"><img src="/public/3.jpeg" alt="medication#1" height="42" width="42"> #3</div>
+                  <div class="col">100 boxes/$1000 USD</div>
+                </div>
+                <br>
+                <strong>MTD TOTAL: $4000 USD </strong>
+                <em><p id="date">as of: </p></em>
+
               </div>
             </div>
             <div class="modal-footer">
@@ -92,7 +103,21 @@
               </button>
             </div>
             <div class="modal-body">
+              <div class="container text-right"><i class="far fa-question-circle"></i>FAQs</div>
               <form id="sendMsgForm">
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Subject</span>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="Subject" aria-describedby="basic-addon1">
+              </div>
+                <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Description</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" placeholder="Send us a message!"></textarea>
+              </div>
+
                 <button type="submit" class="btn btn-outline-info">Send Message</button>
               </form>
             </div>
@@ -255,5 +280,9 @@
       $('#disabledDownload').tooltip()
       $('#disabledFAQs').tooltip();
       })</script>
+
+      <script>
+      document.getElementById("date").innerHTML = Date();
+    </script>
     </body>
 </html>
