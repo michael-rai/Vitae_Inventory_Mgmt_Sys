@@ -35,7 +35,7 @@
                 <button type="button" class="btn" data-toggle="modal" data-target="#reportsModal"><i class="fas fa-receipt"></i>Reports</button>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-envelope-open-text"></i>Help</a>
+                <button type="button" class="btn" data-toggle="modal" data-target="#helpModal"><i class="fas fa-envelope-open-text"></i>Help</button>
               </li>
               <li class="nav-item">
                 <form id='sign-out'>
@@ -60,7 +60,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="container text-right"><a href="#" target="_blank">Download PDF</a></div>
+              <div class="container text-right" ><a><i class="fas fa-file-download" id="disabledDownload" title="Download Disabled in Demo Version" data-toggle="tooltip"></i> Download PDF</a></div>
               <div class="container">
                 <div class="row">
                   <div class="col"><strong>Medication</strong></div>
@@ -77,6 +77,36 @@
           </div>
         </div>
       </div>
+
+      <!-- Help Modal -->
+      <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Help</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container text-right" ><a><i class="far fa-question-circle" id="disabledFAQs" title="Not Available in Demo Version" data-toggle="tooltip"></i> FAQs</a></div>
+              <div class="container">
+                <form id="sendMaintTix">
+                </div>
+                <div class="modal-body form-group">
+                  Subject: <input name="subject" type="text" placeholder=""> <br>
+                  Description: <textarea id="maintMessage" name="description" class="form-control" placeholder="Enter a detailed description of the issue. Please allow 1 business day for a response." rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-outline-info">Submit Message</button>
+                </div>
+              </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
       <!--Landing Page-->
       <div class="jumbotron jumbotron-fluid bg-white" id="landingPage">
@@ -137,7 +167,7 @@
                 <p class="card-text">This is a dummy description of medication in Inventory </p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">SKU # 0002</li>
                 <li class="list-group-item">In Stock</li>
                 <li class="list-group-item"><meter value="4" min="0" max="10">4 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
@@ -154,7 +184,7 @@
                 <p class="card-text">This is a dummy description of medication in Inventory </p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">SKU # 0003</li>
                 <li class="list-group-item">In Stock</li>
                 <li class="list-group-item"><meter value="8" min="0" max="10">8 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
               </ul>
@@ -171,7 +201,7 @@
                 <p class="card-text">This is a dummy description of medication in Inventory </p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">SKU # 0001</li>
+                <li class="list-group-item">SKU # 0004</li>
                 <li class="list-group-item stock">In Stock</li>
                 <li class="list-group-item"><meter value="1" min="0" max="10" id="meter4">2 out of 10</meter> <a href="#" class="card-link" id="meterText">Force Reorder</a><a href="#" class="card-link" id="meterRestock" hidden>Restock</a></li>
               </ul>
@@ -198,5 +228,11 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script type="text/javascript">
+      $(document).ready( function (){
+      $('#disabledDownload').tooltip()
+      $('#disabledFAQs').tooltip();
+      })</script>
     </body>
 </html>
