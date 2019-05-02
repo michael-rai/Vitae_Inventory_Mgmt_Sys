@@ -10,4 +10,5 @@ $(() => {
   $('#logIn').on('submit', events.onLogIn)
   $('#logOut').on('click', events.onLogOut)
   $('#runSim').on('click', events.onRunSim)
+  $('#meterRestock').on('click'.events.meterRefresh)
 })

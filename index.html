@@ -19,9 +19,14 @@
 
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="https://vitaeindustries.com/" target="_blank">
           <img src="/public/VitaeLogo.png" width="30" height="30" alt=""></a><strong>Vitae Industries: Inventory Management System</strong>
-          <div class="collapse navbar-collapse" id="navbarText" hidden>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light" id="navbar2" hidden>
+          <a class="navbar-brand" href="https://vitaeindustries.com/" target="_blank">
+          <img src="/public/VitaeLogo.png" width="30" height="30" alt=""></a><strong>Vitae Industries: Inventory Management System</strong>
+          <div class="collapse navbar-collapse" id="navbarText" >
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
@@ -39,7 +44,7 @@
               </li>
             </ul>
             <span class="navbar-text">
-              <a href="https://vitaeindustries.com/" target="_blank">Vitae Indutries, Inc.</a>
+              Demo Version 1.0
             </span>
           </div>
       </nav>
@@ -78,10 +83,10 @@
         <div class="container text-center">
           <img src="/public/VitaeLogo.png" alt="VitaeLogo" class="img-fluid">
           <h1 class="display-4">Vitae Automated Inventory System</h1>
-          <p class="lead">Welcome to the Demo Version of the Vitae Automated Inventory System. Sign in below by typing "0000"</p>
+          <p class="lead">Welcome to the Demo Version of the Vitae Automated Inventory System.</p>
           <form id="logIn">
             <div class="input-group mb-4">
-              <input type="password" class="form-control" placeholder="Enter Store Login Code" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 5px;">
+              <input type="password" class="form-control" placeholder="Click Log In to proceed." aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 5px;">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-outline-info"  id="button-addon2">Log In</button>
               </div>
@@ -90,7 +95,7 @@
 
           <!-- login Staus msg-->
           <div class="container text-center">
-            <h5 id="loginMsg">Invalid Store Login, please try again (will move this feature)</h5>
+            <h5 id="loginMsg"></h5>
           </div>
         </div>
       </div>
@@ -168,7 +173,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">SKU # 0001</li>
                 <li class="list-group-item stock">In Stock</li>
-                <li class="list-group-item"><meter value="1" min="0" max="10">2 out of 10</meter> <a href="#" class="card-link">Force Reorder</a></li>
+                <li class="list-group-item"><meter value="1" min="0" max="10" id="meter4">2 out of 10</meter> <a href="#" class="card-link" id="meterText">Force Reorder</a><a href="#" class="card-link" id="meterRestock" hidden>Restock</a></li>
               </ul>
               <div class="card-body">
                 <p id="rxAlert4"><em>No alerts at this time.</em></p>

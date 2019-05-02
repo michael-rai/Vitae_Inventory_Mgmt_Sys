@@ -4,7 +4,8 @@
 const onLogIn = event => {
   event.preventDefault()
   console.log('clicked')
-  document.getElementById('navbarText').hidden = false
+  document.getElementById('navbar').hidden = true
+  document.getElementById('navbar2').hidden = false
   document.getElementById('inventoryView').hidden = false
   document.getElementById('landingPage').hidden = true
 }
@@ -12,6 +13,8 @@ const onLogIn = event => {
 const onLogOut = event => {
   event.preventDefault()
   console.log('clicked')
+  document.getElementById('navbar2').hidden = true
+  document.getElementById('navbar').hidden = false
   document.getElementById('inventoryView').hidden = true
   document.getElementById('landingPage').hidden = false
   // $('landingPage').fadeIn(700)
@@ -30,13 +33,21 @@ const onRunSim = event => {
       $('#rxAlert4').fadeOut(6000)
       $('#rxAlert4a').fadeIn(7000).text('Shipment Received, press "Restock"')
       // $('#rxAlert4a').text('Shipment Received, press "Restock"')
+      document.getElementById('meterRestock').hidden = false
     }
     console.log(meterVal)
   }
 }
 
+const meterRefresh = event => {
+  event.preventDefault()
+  console.log('clicked restock')
+  document.getElementById('meter4').value = 10
+}
+
 module.exports = {
   onLogIn,
   onLogOut,
-  onRunSim
+  onRunSim,
+  meterRefresh
 }
